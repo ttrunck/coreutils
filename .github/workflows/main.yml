@@ -22,7 +22,13 @@ jobs:
         toolchain: stable
         default: true
         profile: minimal # minimal component installation (ie, no documentation)
-    - name: "`fmt` testing"
+    - name: "prepare busytest"
       shell: bash
       run: |
-        make busytest
+        make prepare-busytest
+    - name: "run busybox testsuite"
+      shell: bash
+      run: |
+        bindir=$(pwd)/target/debug
+        cd tmp/busybox-*/testsuite
+        ./runtest
