@@ -31,4 +31,4 @@ jobs:
       run: |
         bindir=$(pwd)/target/debug
         cd tmp/busybox-*/testsuite
-        S=$(bindir=$bindir ./runtest) && printf "%s\n" "$S" || { printf "%s\n" "$S" | grep "FAIL:" | sed -e "s/FAIL: /::warning ::/g" }
+        S=$(bindir=$bindir ./runtest) && printf "%s\n" "$S" || { printf "%s\n" "$S" | grep "FAIL:" | sed -e "s/FAIL: /::warning ::/g" ; }
