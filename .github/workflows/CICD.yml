@@ -14,7 +14,7 @@ env:
   RUST_MIN_SRV: "1.33.0" ## v1.33.0 - minimum version for tempfile 3.1.0 and libc needed for aarch64
   RUST_COV_SRV: "2020-08-01" ## (~v1.47.0) supported rust version for code coverage; (date required/used by 'coverage') ## !maint: refactor when code coverage support is included in the stable channel
 
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   code_format:
