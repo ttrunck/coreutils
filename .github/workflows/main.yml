@@ -31,4 +31,4 @@ jobs:
       run: |
         bindir=$(pwd)/target/debug
         cd tmp/busybox-*/testsuite
-        ./runtest
+        bindir=$bindir ./runtest
